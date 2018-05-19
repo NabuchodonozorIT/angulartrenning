@@ -1,0 +1,25 @@
+<form *ngIf="form$ | async as form" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+  <h2>{{form.id ? 'Add new pilot' : 'Edit'}}</h2>
+  <button type="button" class="back" routerLink="/">Back</button>
+  <div class="avatar-preview">
+    <img #avatar
+         (error)="avatar.src = defaultAvatarUrl"
+         [src]="form.get('imageUrl').value || defaultAvatarUrl"/>
+  </div>
+  <br>
+  <label for="firstName">First Name</label>
+  <span class="error" *ngIf="form.get('firstName').hasError('pilotName')">Use Uppercase</span>
+  <input id="firstName" type="text" formControlName="firstName"/>
+
+  <label for="last-name">Last Name</label>
+  <span class="error" *ngIf="form.get('lastName').hasError('pilotName')">Use Uppercase</span>
+  <input id="last-name" type="text" formControlName="lastName"/>
+
+  <label for="avatar">Country</label>
+  <input id="avatar" type="text" formControlName="imageUrl"/>
+
+  <button type="submit" [disabled]="form.invalid">{{form.id ? 'Add' : 'Save'}}</button>
+</form>
+
+
+

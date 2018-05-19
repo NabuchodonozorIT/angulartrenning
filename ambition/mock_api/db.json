@@ -1,0 +1,22 @@
+{
+  "pilots": [
+    {
+      "id": 1,
+      "imageUrl": "/assets/sarah.jpg",
+      "firstName": "Sarah test",
+      "lastName": "Kerrigan"
+    },
+    {
+      "id": 2,
+      "firstName": "Arthas",
+      "lastName": "Menethil",
+      "imageUrl": "/assets/arthas.jpg"
+    },
+    {
+      "id": 3,
+      "firstName": "Momad ",
+      "lastName": "Prophet",
+      "imageUrl": "/assets/prophet.jpg"
+    }
+  ]
+}

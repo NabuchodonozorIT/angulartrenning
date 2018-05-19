@@ -1,0 +1,23 @@
+<button type="button"
+        class="add-button"
+        routerLink="/pilots/new">Add new Pilot
+</button>
+<br>
+<app-pilot *ngFor="let pilot of pilots"
+           [pilot]="pilot"
+           [class.selected]="pilot == selectedPilot">
+  <div class="action-buttons">
+    <button type="button" class="_QASelect"
+            *ngIf="pilot != selectedPilot; else deselectButton"
+            (click)="selectPilot(pilot)">
+      Select
+    </button>
+    <ng-template #deselectButton>
+      <button type="button" class="_QAdeselect"
+              (click)="selectPilot(null)">
+        Deselect
+      </button>
+    </ng-template>
+    <button type="button" [routerLink]="['/pilots', pilot.id, 'edit']">Edytuj</button>
+  </div>
+</app-pilot>

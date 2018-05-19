@@ -1,0 +1,16 @@
+.form-order {
+  border-top: 2px solid red;
+}
+
+.error {
+  color: orangered;
+  font-weight: bold;
+  align-content: center;
+  text-transform: uppercase;
+}
+
+.is-producing {
+  color: green;
+  font-weight: bold;
+  align-content: center;
+}

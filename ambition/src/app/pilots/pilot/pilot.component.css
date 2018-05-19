@@ -1,0 +1,12 @@
+:host {
+  display: inline-block;
+  text-align: center;
+}
+
+img {
+  max-width: 90px;
+}
+
+h4 {
+  margin-top: 0;
+}

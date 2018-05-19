@@ -1,0 +1,53 @@
+:host {
+  display: inline-block;
+  max-width: 100px;
+  margin: 10px;
+}
+
+h4 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.health-bar {
+  background: red;
+  height: 10px;
+  margin: 10px 0;
+}
+
+.remaining-health {
+  background: green;
+  height: 100%;
+}
+
+.property-state {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 28px;
+}
+
+.property-state:not(.active) {
+  opacity: 0.5;
+}
+
+.images-wrapper {
+  position: relative;
+  height: 95px;
+  width: 100%;
+}
+
+img.space-ship-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+img.pilot-image {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  bottom: 0;
+  right: 0;
+}

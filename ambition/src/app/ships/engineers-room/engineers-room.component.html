@@ -1,0 +1,22 @@
+<p>Current of ships in Main Hangar: {{shipsCount$ | async}}</p>
+<form class="form-order" #form="ngForm" (ngSubmit)="onSubmit(form.value)" novalidate>
+  <label>Guantity of order</label>
+  <br>
+  <input #shipCountInput="ngModel"
+         ngModel
+         type="number"
+         name="shipCount"
+         required
+         pattern="[1-5]"/>
+  <br>
+  <div class="error" *ngIf="shipCountInput.hasError('required')">it must be filled out</div>
+  <div class="error" *ngIf="shipCountInput.hasError('pattern')">it must be filled out 1 - 5</div>
+  <br>
+  <input type="radio" name="shipType" [value]="availableTypes.Fighter" ngModel required> Viper
+  <br>
+  <input type="radio" name="shipType" [value]="availableTypes.Bomber" ngModel required> Raptor
+  <br>
+  <!--<button type="submit" class="btn btn-success" [disabled]="form.invalid">Create</button>-->
+  <button type="submit" [disabled]="form.invalid || isProducing">Create</button>
+  <p *ngIf="isProducing" class="is-producing">Proggres creating ships...</p>
+</form>

@@ -1,0 +1,26 @@
+<h4>{{spaceShip.modelName | shipName:spaceShip.pilot?.fullName}}</h4>
+<div class="images-wrapper">
+  <img class="space-ship-image"
+       [src]="spaceShip.imageUrl"
+       appSpaceImage/>
+  <img class="pilot-image"
+       *ngIf="spaceShip.pilot"
+       [src]="spaceShip.pilot.imageUrl"
+       [title]="spaceShip.pilot.fullName"
+       appSpaceImage/>
+</div>
+<div class="health-bar">
+  <div class="remaining-health" [style.width.%]="spaceShip.health" [title]="spaceShip.health + '%'"></div>
+</div>
+<div class="property-state"
+     [class.active]="spaceShip.activeShields"
+     [title]="'Shields ' + (spaceShip.activeShields ? 'active' : 'inactive')">
+  ◈ x {{spaceShip.quantity}}
+</div>
+<div class="property-state"
+     [class.active]="spaceShip.activeWeapon"
+     [title]="'Weapons ' + (spaceShip.activeWeapon ? 'active' : 'inactive')">
+  ⚔ x {{spaceShip.power}}
+</div>
+
+<ng-content></ng-content>

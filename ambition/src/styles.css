@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url('/assets/space.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+}
+
+h1, h2, h3, h4, p, label, input, select {
+  background-color: #9a949487;
+  margin: 5px;
+}
+
+input{
+  color: #FFF;
+  font-weight: bold;
+}
+
+button {
+  margin: 5px;
+  background-color: #9a949487;
+  border: 1px solid #FFF;
+  padding: 5px 10px;
+  color: #241c64;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+button:hover {
+  border: 1px solid red;
+  color: #FFF;
+}
